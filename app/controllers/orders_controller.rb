@@ -2,6 +2,8 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    # @line_items = @order.line_items(created_at: :desc)
+    # @products = @products.line_items(created_at: :desc)
   end
 
   def create

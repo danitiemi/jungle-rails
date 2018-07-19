@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :orders, only: [:create, :show]
 
   namespace :admin do
+    #  get '/' => 'dashboard#show' 
+    #  get ({ get '/' => 'dashboard#show'  })
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
     resources :categories, except: [:edit, :update, :show]
