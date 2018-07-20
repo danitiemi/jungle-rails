@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         if user.save
             session[:user_id] = user.id
             # Tell the UserMailer to send a welcome email after save
-            UserMailer.with(user: user).welcome_email.deliver_now
+            UserMailer.welcome_email(user).deliver_now
             redirect_to '/'
         else
             redirect_to '/signup'
