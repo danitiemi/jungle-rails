@@ -29,13 +29,24 @@ Rails.application.configure do
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
-  config.action_mailer.delivery_method = :test
+  # config.action_mailer.delivery_method = :test
 
   # Randomize the order test cases are executed.
   config.active_support.test_order = :random
 
+  config.action_mailer.preview_path = "(Rails.root)/test/mailers/previews"
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => 'a12f27950905a9',
+    :password => '2283b376d22ea5',
+    :address => 'smtp.mailtrap.io',
+    :domain => 'smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
+  }
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
