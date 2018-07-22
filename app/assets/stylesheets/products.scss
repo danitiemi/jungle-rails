@@ -63,6 +63,33 @@ main section.categories-show {
         color: white;
       }
 
+      aside.low-stock {
+        color: white;
+        font-weight: 800;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 15px 10px 10px;
+        background-color: #FFD300;
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 20px;
+        font-size: 0.8em;
+      }
+      
+      aside.rating {
+        color: white;
+        font-weight: 800;
+        position: absolute;
+        bottom: 0;
+        right:0;
+        transform: translateY(-64px);
+        padding: 10px 10px 10px 15px;
+        background-color: green;
+        border-top-left-radius: 20px;
+        font-size: 0.8em;
+      }
+
+
       &:hover {
 
         border-color: #999;
