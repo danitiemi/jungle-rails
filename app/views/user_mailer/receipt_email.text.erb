@@ -1,0 +1,22 @@
+Hello, <%= @user.name %> !
+===============================================
+
+Order <%= @order.id %>
+
+Thank you for your order, <%= @order.email %>! Here's an overview of what you just ordered:
+ 
+To login to the site, just follow this link: <%= @url %>.
+
+<% @order.line_items.each do |line| %>
+    <% product = Product.find_by(id: line.product_id) %>
+        <%= product.name %>
+        QUANTITY: <%= line.quantity %>
+        PRICE: <%= line.total_price %>
+        SUBTOTAL: <%= "#{item.total_price_cents/100}.#{item.total_price_cents%100}" %> 
+  <% end %>
+
+    TOTAL: <%= @order.total %>
+
+    EMAIL: <%= @order.email %>
+
+Thank you for your order!

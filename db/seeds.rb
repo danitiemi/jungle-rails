@@ -139,8 +139,7 @@ puts "Re-creating Users ..."
 User.destroy_all
 
 User.create!({
-  first_name: 'Bart',
-  last_name: 'Simpson',
+  name: 'Bart',
   email: 'bart@thesimpsons.ca',
   password: 'krusty',
   password_confirmation: 'krusty'
@@ -148,8 +147,7 @@ User.create!({
 
 
 User.create!({
-  first_name: 'Hermione',
-  last_name: 'Granger',
+  name: 'Hermione',
   email: 'hermione@gryffindor.ca',
   password: 'obliviate',
   password_confirmation: 'obliviate'
